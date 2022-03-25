@@ -10,7 +10,7 @@ namespace LeetCodex
     {
         public void soma()
         {
-            Console.WriteLine("soma");
+            Console.WriteLine("1 + 1");
         }
     }
 }
