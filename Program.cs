@@ -11,13 +11,13 @@ namespace LeetCodex
             stopwatch.Start();
 
             Two_Sum1 two_Sum = new Two_Sum1();
-            int[] num = { 2, 7, 11, 15 };
-            var returnValue = two_Sum.TwoSum(num, 9);
+            int[] num = { 3, 3 };
+            var returnValue = two_Sum.TwoSum(num, 6);
 
 
-            foreach (var item in returnValue)
+            for (int i = 0; i < returnValue.Length; i++)
             {
-                Console.WriteLine(item);
+                Console.Write($"[{returnValue[i]}]");
             }
 
             Console.WriteLine($"Tempo passado: {stopwatch.Elapsed}");
