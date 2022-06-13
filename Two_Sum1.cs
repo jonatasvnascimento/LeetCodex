@@ -10,20 +10,30 @@ namespace LeetCodex
     {
         public int[] TwoSum(int[] nums, int target)
         {
-            int[] returnValue = new int[2];
+            int arrayLength = nums.Length;
+            Dictionary<int, int> resultDictionary = new();
 
-            for (int i = 0; i < nums.Length; i++)
+            //Validations
+            if (nums == null || arrayLength < 2)
             {
-                for (int j = i + 1; j < nums.Length; j++)
-                {
-                    if (target == nums[j] + nums[i])
-                    {
-                        returnValue[0] = i;
-                        returnValue[1] = j;
-                    }
-                }
+                return Array.Empty<int>();
             }
-            return returnValue;
-        }
+
+            //Logic
+            for (int i = 0; i < arrayLength; i++)
+            {
+                int firstNumber = nums[i];
+                int secondNumber = target - firstNumber;
+                if (resultDictionary.TryGetValue(secondNumber, out int index))
+                {
+                    return new[] { index, i };
+                }
+
+                //resultDictionary.Add(firstNumber, i);
+                resultDictionary[firstNumber] = i;
+            }
+
+            return Array.Empty<int>();
+        }                   
     }
 }
