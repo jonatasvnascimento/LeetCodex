@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace LeetCodex
 {
@@ -6,8 +7,21 @@ namespace LeetCodex
     {
         static void Main(string[] args)
         {
-            Two_Sum1 teste = new Two_Sum1();
-            teste.soma();
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            Two_Sum1 two_Sum = new Two_Sum1();
+            int[] num = { 2, 7, 11, 15 };
+            var returnValue = two_Sum.TwoSum(num, 9);
+
+
+            foreach (var item in returnValue)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine($"Tempo passado: {stopwatch.Elapsed}");
+            stopwatch.Stop();
         }
     }
 }

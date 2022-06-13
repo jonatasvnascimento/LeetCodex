@@ -8,9 +8,22 @@ namespace LeetCodex
 {
     public class Two_Sum1
     {
-        public void soma()
+        public int[] TwoSum(int[] nums, int target)
         {
-            Console.WriteLine("1 + 1");
+            int[] returnValue = new int[2];
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 1; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        returnValue[0] = nums[i];
+                        returnValue[1] = nums[i];
+                    }
+                }
+            }
+            return returnValue;
         }
     }
 }
