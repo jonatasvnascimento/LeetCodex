@@ -18,8 +18,8 @@ namespace LeetCodex
                 {
                     if (nums[i] + nums[j] == target)
                     {
-                        returnValue[0] = nums[i];
-                        returnValue[1] = nums[i];
+                        returnValue[0] = i;
+                        returnValue[1] = j;
                     }
                 }
             }
