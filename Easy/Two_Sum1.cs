@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodex
+namespace LeetCodex.Easy
 {
     public class Two_Sum1
     {
@@ -34,6 +34,6 @@ namespace LeetCodex
             }
 
             return Array.Empty<int>();
-        }                   
+        }
     }
 }
