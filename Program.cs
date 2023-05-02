@@ -18,9 +18,9 @@ namespace LeetCodex
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            exec.TwoSum();
+            exec.RomanToInteger();
 
-            Console.WriteLine($"Tempo passado: {stopwatch.Elapsed}");
+            Console.WriteLine($"\nTempo passado: {stopwatch.Elapsed}");
             stopwatch.Stop();
         }
     }

@@ -14,18 +14,24 @@ namespace LeetCodex.Config
 
             List<int> ls = new List<int>();
 
-            for (int i = 0; i < 300000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 ls.Add(i);
             }
 
             var num = ls.ToArray();
-            var returnValue = two_Sum.TwoSum(num, 500000);
+            var returnValue = two_Sum.TwoSum(num, 10);
 
             for (int i = 0; i < returnValue.Length; i++)
             {
                 Console.Write($"[{returnValue[i]}]");
             }
         }
+
+        public void RomanToInteger()
+        {
+            Roman_to_Integer.RomanToInt("III");
+        }
+
     }
 }
