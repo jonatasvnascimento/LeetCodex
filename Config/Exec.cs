@@ -30,7 +30,7 @@ namespace LeetCodex.Config
 
         public void RomanToInteger()
         {
-            Roman_to_Integer.RomanToInt("III");
+            Roman_to_Integer.RomanToInt("MCMXCIV");
         }
 
     }

@@ -12,33 +12,26 @@ namespace LeetCodex.Easy
         {
             Dictionary<string, int> NumRoman = new Dictionary<string, int>()
             {
-                {"I",1},
-                {"V",5},
-                {"X",10},
-                {"L",50},
-                {"C",100},
-                {"D",500},
-                {"M",1000},
-                
+                {"I",1},{"V",5},{"X",10},{"L",50},{"C",100},{"D",500},{"M",1000},
             };
-
-            int count = 0;
-
-            for (int i = 0; i < s.Length; i++)
+            int Numeral = 0;
+            int prevValue = 0;
+            for (int i = s.Length - 1; i >= 0; i--)
             {
-                foreach (KeyValuePair<string, int> num in NumRoman)
+                int currentValue = NumRoman[s[i].ToString()];
+
+                if (currentValue < prevValue)
                 {
-                    if (s[i].ToString() == num.Key)
-                    {
-                        count += num.Value;
-                        Console.WriteLine(num.Key);
-                    }
+                    Numeral -= currentValue;
                 }
+                else
+                {
+                    Numeral += currentValue;
+                }
+
+                prevValue = currentValue;
             }
-
-            Console.WriteLine(count);
-
-            return 0;
+            return Numeral;
         }
     }
 }
