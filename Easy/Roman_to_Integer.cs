@@ -19,7 +19,6 @@ namespace LeetCodex.Easy
             for (int i = s.Length - 1; i >= 0; i--)
             {
                 int currentValue = NumRoman[s[i].ToString()];
-
                 if (currentValue < prevValue)
                 {
                     Numeral -= currentValue;
