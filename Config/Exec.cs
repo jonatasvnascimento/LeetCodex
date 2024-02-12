@@ -20,7 +20,10 @@ namespace LeetCodex.Config
             }
 
             var num = ls.ToArray();
-            var returnValue = two_Sum.TwoSum(num, 10);
+
+            int[] num2 = { 2, 11, 15, 7 };
+
+            var returnValue = two_Sum.TwoSum(num2, 22);
 
             for (int i = 0; i < returnValue.Length; i++)
             {
