@@ -7,7 +7,29 @@
 /// </summary>
 public class P0001_TwoSum
 {
-    public int[] Solve(int[] nums, int target)
+
+    public int[] Solucao1(int[] nums, int target)
+    {
+        for (int i = 0; i < nums.Length; i++)
+        {
+            for (int j = i + 1; j < nums.Length; j++)
+            {
+                if (nums[i] + nums[j] == target)
+                {
+                    return new[] { i, j };
+                }
+            }
+        }
+
+        return new int[0];
+    }
+
+    public int[] Solucao2(int[] nums, int target)
+    {
+        return [];
+    }
+
+    public int[] Solucao3(int[] nums, int target)
     {
         var map = new Dictionary<int, int>();
         for (int i = 0; i < nums.Length; i++)
