@@ -7,7 +7,7 @@
 /// </summary>
 public class P0001_TwoSum
 {
-
+    //O(n^2) time complexity, O(1) space complexity
     public int[] Solucao1(int[] nums, int target)
     {
         for (int i = 0; i < nums.Length; i++)
@@ -23,12 +23,25 @@ public class P0001_TwoSum
 
         return new int[0];
     }
-
+    //O(n log n) time complexity, O(1) space complexity
     public int[] Solucao2(int[] nums, int target)
     {
-        return [];
+        Array.Sort(nums);
+        int l = 0;
+        int r = nums.Length - 1;
+
+        while(l < r)
+        {
+            int v = nums[l] + nums[r];
+            if (v == target)
+                return new int[] { l, r };
+            r--;
+        }
+
+        return Array.Empty<int>();
     }
 
+    //O(n) time complexity, O(n) space complexity
     public int[] Solucao3(int[] nums, int target)
     {
         var map = new Dictionary<int, int>();
